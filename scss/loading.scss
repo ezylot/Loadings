@@ -111,6 +111,60 @@ body > div {
   }
 }
 
+#fifth {
+
+  .bar {
+    background: #2F2F2F;
+    height: 15px;
+  }
+
+  .main-bar {
+    animation: spin infinite 4s linear;
+    width: 150px;
+
+    >.bar {
+      height: 100%;
+      width: 90%;
+    }
+
+    .left-bar {
+      animation: spinCounter infinite 1.6s linear;
+      margin-left: -45%;
+      margin-top: -5px;
+    }
+
+    .right-bar {
+      animation: spin infinite 2.3s linear;
+      margin-left: 55%;
+      margin-top: -10px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCounter {
+  0% { }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 @keyframes jump {
   0% {
     margin-bottom: 0;
