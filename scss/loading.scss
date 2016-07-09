@@ -60,7 +60,6 @@ body > div {
 }
 
 #second {
-
   .circle-wrapper {
     height: 60%;
     width: 60%;
@@ -85,12 +84,48 @@ body > div {
   justify-content: center;
 
   .pulse {
-    animation: pulse infinite 4s linear;
+    animation: pulseCircle infinite 4s linear;
     border-radius: 50%;
   }
 }
 
-@keyframes pulse {
+#fourth {
+  flex-direction: row;
+
+  .bar {
+    animation: jump infinite 1.5s ease-in-out;
+    width: 15px;
+    height: 100px;
+    background-color: #2F2F2F;
+    margin-right: 3%;
+
+  }
+
+  .bar-two {
+    animation-delay: -0.5s;
+  }
+
+  .bar-three {
+    animation-delay: -1s;
+    margin-right: 0;
+  }
+}
+
+@keyframes jump {
+  0% {
+    margin-bottom: 0;
+  }
+
+  50% {
+    margin-bottom: 50px;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes pulseCircle {
   0% {
     background-color: #70c5f2;
     width: 40%;
@@ -99,8 +134,8 @@ body > div {
 
   50% {
     background-color: #007498;
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
   }
 
   100% {
