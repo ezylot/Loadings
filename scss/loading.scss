@@ -35,17 +35,15 @@ body > div {
   }
 
   .loading-main {
-    height: 70%;
-    width: 70%;
+    align-items: center;
+    animation: spinAndTransform 5s infinite;
     border-bottom-right-radius: 50%;
     border-top-right-radius: 50%;
     background: #FFFFFF;
-
-    animation: spinAndTransform 5s infinite;
-
     display: flex;
-    align-items: center;
+    height: 70%;
     justify-content: center;
+    width: 70%;
   }
 
   .circle {
@@ -111,7 +109,7 @@ body > div {
   }
 }
 
-#fifth {
+#fifth, #sixth {
 
   .bar {
     background: #2F2F2F;
@@ -141,6 +139,12 @@ body > div {
   }
 }
 
+#sixth {
+  .main-bar {
+    animation: half-spin infinite 4s ease-in-out;
+  }
+}
+
 @keyframes spin {
   0% { }
 
@@ -150,6 +154,27 @@ body > div {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+@keyframes half-spin {
+  0% { }
+
+  45% {
+    transform: rotate(180deg);
+  }
+
+  55% {
+    transform: rotate(180deg);
+  }
+
+  90% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+     transform: rotate(0deg);
   }
 }
 
